@@ -19,7 +19,7 @@ const Projects = () => {
       photo: campus,
       description: 'Campus Thoughts is a platform where students share ideas, experiences, and opinions from campus life. It encourages open discussion, creativity, and meaningful connections among students.',
       tech: ['React', 'Node.js', 'MongoDB', 'Daisy UI' ,'Tailwind CSS'],
-      liveLink: "",
+      liveLink: "https://campus-thoughts-4.onrender.com",
       githubLink: "https://github.com/Abinesh025/Campus-Thoughts"
     },
     {
@@ -27,7 +27,7 @@ const Projects = () => {
       photo: students,
       description: 'Stores student personal and academic details in a structured database.Built using React, Node.js, Express, and MongoDB for efficient data management, mama 📘💾 ',
       tech:  ['React', 'Node.js', 'MongoDB', 'Prebuilt UI','Tailwind CSS'],
-      liveLink: '#',
+      liveLink: 'https://mern-std-management-1.onrender.com',
       githubLink: "https://github.com/Abinesh025/MERN-STD-Management",
     },
     {
