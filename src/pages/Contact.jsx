@@ -2,6 +2,10 @@ import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { useInView } from 'framer-motion'
 import { useRef } from 'react'
+import { AiFillGithub } from "react-icons/ai";
+import { FaLinkedin } from "react-icons/fa";
+import { FiMail } from "react-icons/fi";
+import { toast } from 'react-hot-toast';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -23,28 +27,29 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault()
     // Handle form submission here
-    setStatus('success')
+    setStatus('success',toast.success("Message sent successfully!"))
+
     setTimeout(() => {
       setStatus('')
       setFormData({ name: '', email: '', message: '' })
-    }, 3000)
+          }, 3000)
   }
 
   const socialLinks = [
     {
       name: 'LinkedIn',
       url: 'https://linkedin.com/in/yourprofile',
-      icon: '💼',
+      icon: <AiFillGithub />,
     },
     {
       name: 'GitHub',
       url: 'https://github.com/yourusername',
-      icon: '💻',
+      icon: <FaLinkedin />,
     },
     {
       name: 'Email',
       url: 'mailto:your.email@example.com',
-      icon: '📧',
+      icon: <FiMail />,
     },
   ]
 
@@ -127,7 +132,7 @@ const Contact = () => {
                         value={formData.name}
                         onChange={handleChange}
                         placeholder="Your Name"
-                        className="input input-bordered w-full"
+                        className="input input-bordered w-full bg-white/20"
                         required
                       />
                     </div>
@@ -141,12 +146,12 @@ const Contact = () => {
                         value={formData.email}
                         onChange={handleChange}
                         placeholder="your.email@example.com"
-                        className="input input-bordered w-full"
+                        className="input input-bordered w-full bg-white/20"
                         required
                       />
                     </div>
                     <div className="form-control">
-                      <label className="label">
+                      <label className="label ">
                         <span className="label-text">Message</span>
                       </label>
                       <textarea
@@ -154,11 +159,11 @@ const Contact = () => {
                         value={formData.message}
                         onChange={handleChange}
                         placeholder="Your message..."
-                        className="textarea textarea-bordered h-32"
+                        className="textarea textarea-bordered h-32 bg-white/20"
                         required
                       />
                     </div>
-                    <div className="form-control mt-6">
+                    <div className="form-control mt-6 ">
                       <button type="submit" className="btn btn-primary">
                         Send Message
                       </button>

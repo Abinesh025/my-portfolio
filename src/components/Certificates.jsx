@@ -1,6 +1,15 @@
 import { motion } from 'framer-motion'
 import { useInView } from 'framer-motion'
 import { useRef } from 'react'
+import alpha from "../assets/certifications/code alpha.jpg"
+import Cloud from "../assets/certifications/Cloud Computing Nptel.jpg"
+import  Wireless from "../assets/certifications/Wireless Standard Design Nptel.jpg"
+import Business from "../assets/certifications/E-Business Nptel.jpg"
+import ibm from "../assets/certifications/Ibm.jpg"
+import large from "../assets/certifications/large.jpg"
+import prompt from "../assets/certifications/propmting.jpg"
+import skill from "../assets/certifications/skill.jpg"
+import tcs from "../assets/certifications/tcs.jpg"
 
 const Certificates = () => {
   const ref = useRef(null)
@@ -8,34 +17,31 @@ const Certificates = () => {
 
   const certificates = [
     {
-      issuer: 'AWS',
-      title: 'AWS Certified Solutions Architect',
-      year: '2023',
+      photo:alpha,
     },
     {
-      issuer: 'Google',
-      title: 'Google Cloud Professional Developer',
-      year: '2023',
+       photo:Cloud,
     },
     {
-      issuer: 'Meta',
-      title: 'Meta Front-End Developer Certificate',
-      year: '2022',
+       photo:Wireless,
     },
     {
-      issuer: 'Microsoft',
-      title: 'Microsoft Azure Fundamentals',
-      year: '2022',
+       photo:Business,
     },
     {
-      issuer: 'FreeCodeCamp',
-      title: 'Full Stack Web Development',
-      year: '2021',
+       photo:ibm,
     },
     {
-      issuer: 'Coursera',
-      title: 'React Specialization',
-      year: '2021',
+       photo:large,
+    },
+    {
+       photo:prompt,
+    },
+    {
+       photo:skill,
+    },
+    {
+       photo:tcs
     },
   ]
 
@@ -65,10 +71,8 @@ const Certificates = () => {
         >
           <div className="card-body">
             <div className="flex items-center justify-between mb-2">
-              <h3 className="card-title text-xl">{cert.issuer}</h3>
-              <span className="badge badge-secondary">{cert.year}</span>
+              <img src={cert.photo} alt='Certificate' className='w-full rounded' />
             </div>
-            <p className="text-base-content/80">{cert.title}</p>
           </div>
         </motion.div>
       ))}

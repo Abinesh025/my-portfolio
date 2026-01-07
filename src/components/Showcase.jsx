@@ -42,7 +42,7 @@ const Showcase = () => {
           initial={{ opacity: 0, x: -100 }}
           animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -100 }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-12 backdrop-blur-md bg-white/10 dark:bg-white/5 rounded-2xl p-8 shadow-xl border border-white/20"
+          className="text-center mb-12 p-8 mt-[-35px]"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-4">Showcase</h2>
           <p className="text-lg text-base-content/70">
@@ -54,14 +54,14 @@ const Showcase = () => {
           initial={{ opacity: 0 }}
           animate={isInView ? { opacity: 1 } : { opacity: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="flex justify-center mb-8"
+          className="flex justify-between items-center mb-8"
         >
-          <div className="tabs tabs-boxed">
+          <div className="tabs tabs-boxed w-full flex items-center justify-evenly gap-6 backdrop-blur-md bg-white/10 h-[50px]">
             {tabs.map((tab) => (
               <button
                 key={tab.id}
                 onClick={() => setActiveTab(tab.id)}
-                className={`tab tab-lg ${
+                className={`tab tab-lg hover:bg-white/10 w-[40%] ${
                   activeTab === tab.id ? 'tab-active' : ''
                 }`}
               >

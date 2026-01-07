@@ -44,13 +44,7 @@ const ParticleBackground = () => {
               mode: 'push',
             },
             onHover: {
-              enable: true,
-              mode: 'repulse',
-              parallax: {
-                enable: true,
-                force: 60,
-                smooth: 10,
-              },
+              enable: false
             },
             resize: true,
           },
@@ -143,7 +137,7 @@ const ParticleBackground = () => {
             },
             animation: {
               enable: true,
-              speed: 3,
+              speed: 1,
               sync: false,
             },
           },
@@ -151,7 +145,7 @@ const ParticleBackground = () => {
             value: 0,
             animation: {
               enable: true,
-              speed: 5,
+              speed: 1,
               sync: false,
             },
             direction: 'random',

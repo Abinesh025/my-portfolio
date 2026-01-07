@@ -4,11 +4,13 @@ import ParticleBackground from './components/ParticleBackground'
 import Home from './pages/Home'
 import Contact from './pages/Contact'
 import './App.css'
+import { Toaster } from 'react-hot-toast'
 
 function App() {
   return (
     <Router>
       <div className="min-h-screen relative">
+        <Toaster />
         <ParticleBackground />
         <div className="relative z-10">
           <Navbar />
