@@ -3,10 +3,13 @@
   "private": true,
   "version": "1.0.0",
   "type": "module",
+  "engines": {
+    "node": ">=18.0.0"    // ⬅ specify Node version
+  },
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
+    "build": "npx vite build",   // ⬅ use npx so Render can find vite
+    "preview": "npx vite preview"
   },
   "dependencies": {
     "framer-motion": "^10.16.16",
