@@ -29,23 +29,7 @@ const Projects = () => {
       tech:  ['React', 'Node.js', 'MongoDB', 'Prebuilt UI','Tailwind CSS'],
       liveLink: 'https://mern-std-management-1.onrender.com',
       githubLink: "https://github.com/Abinesh025/MERN-STD-Management",
-    },
-    {
-      title: 'To-Do ',
-      photo: todo,
-      description: 'A To-Do List app helps users add, edit, and delete tasks efficiently.It keeps daily activities organized and improves productivity.Users can track their progress by marking tasks as completed in real time.',
-      tech: ['HTML', 'CSS', 'JavaScript'],
-      liveLink: '#',
-      githubLink: '#',
-    },
-    {
-      title: 'Weather App',
-      photo: Weather,
-      description: 'A weather app powered by OpenWeatherMap providing real-time and accurate forecasts..Get live temperature, humidity, and weather conditions instantly.Plan your day better with hourly and weekly forecasts, mama ☀️🌧️',
-      tech: ['HTML', 'CSS', 'JavaScript','Api'],
-      liveLink:"" ,
-      githubLink: "https://github.com/Abinesh025/weather-app004",
-    },
+    }
   ]
 
   const cardVariants = {

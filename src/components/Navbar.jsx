@@ -54,7 +54,9 @@ const Navbar = () => {
 
           {/* LOGO */}
           <Link to="/" className="text-xl font-bold">
-            Portfolio
+        <span className="opacity-40 text-xl;">{"<"}</span> 
+    Abinesh   <span className="opacity-40 text-xl">{"/>"}</span> 
+
           </Link>
 
           {/* DESKTOP MENU */}

@@ -27,17 +27,34 @@ const About = () => {
   const cards = [
     {
       title: 'Total Projects',
-      num:'04',
+      num:'02',
       content: 'Developed full-stack applications using React, Node.js, and MongoDB.',
       icon: <FaCode />,
     },
     {
       title: 'Certificates',
-      num:'09',
+      num:'10',
       content: 'Earned certifications in web development, programming, and tools like Git and Postman.',
       icon: <TbCertificate />,
     }
   ]
+  const name = "Abinesh";
+const letters = name.split(""); 
+
+  const containerVariants = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.3, // ⬅ delay between each letter
+    },
+  },
+};
+
+const letterVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+};
+
     const itemVariants = {
     hidden: { opacity: 0, x: -100 },
     visible: {
@@ -65,11 +82,11 @@ const About = () => {
       mx-auto mb-16
     "
   >
-    <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
+    <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-2">
       About Me
     </h2>
     <p className="text-sm sm:text-base text-base-content/70">
-      Transforming ideas into digital experiences
+      ✧ Transforming ideas into digital experiences ✧
     </p>
   </motion.div>
 
@@ -123,11 +140,18 @@ const About = () => {
         </motion.h1>
 
         <motion.h2
-          variants={itemVariants}
-          className="text-2xl sm:text-3xl md:text-4xl font-bold mt-1"
-        >
-          Abinesh
-        </motion.h2>
+  variants={containerVariants}
+  initial="hidden"
+  animate="visible"
+  className="text-2xl sm:text-3xl md:text-4xl font-bold mt-3 flex gap-1"
+>
+  {letters.map((letter, index) => (
+    <motion.span key={index} variants={letterVariants}>
+      {letter}
+    </motion.span>
+  ))}
+</motion.h2>
+
 
         <p className="text-sm sm:text-base text-base-content/70 mt-4">
           I'm a passionate developer with a love for creating innovative solutions

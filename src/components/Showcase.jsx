@@ -46,7 +46,7 @@ const Showcase = () => {
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-4">Showcase</h2>
           <p className="text-lg text-base-content/70">
-            Explore my work, achievements, and technical expertise
+           ✧ Explore my work, achievements, and technical expertise ✧
           </p>
         </motion.div>
 

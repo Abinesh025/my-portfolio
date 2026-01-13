@@ -6,6 +6,8 @@ import { AiFillGithub } from "react-icons/ai";
 import { FaLinkedin } from "react-icons/fa";
 import { FiMail } from "react-icons/fi";
 import { toast } from 'react-hot-toast';
+import { FaPhone } from "react-icons/fa6";
+import { IoLocationOutline } from "react-icons/io5";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -36,20 +38,35 @@ const Contact = () => {
   }
 
   const socialLinks = [
+        {
+      name: 'Email',
+      url: 'mailto:abineshr005@gmail.com',
+      subName:"abineshr005@gmail.com",
+      icon: <FiMail />,
+    },
     {
-      name: 'LinkedIn',
-      url: 'https://linkedin.com/in/yourprofile',
-      icon: <AiFillGithub />,
+      name: 'Phone',
+      url: "tel:+919787481611",
+      subName:"9787481611",
+      icon: <FaPhone />,
+    },
+    {
+      name: 'Location',
+      url:"Nagapattinam, TamilNadu",
+      subName:"Nagapattinam, TamilNadu",
+      icon: <IoLocationOutline />,
     },
     {
       name: 'GitHub',
-      url: 'https://github.com/yourusername',
-      icon: <FaLinkedin />,
+      url: 'https://github.com/Abinesh025',
+      subName:"github.com/Abinesh025",
+      icon: <AiFillGithub />,
     },
     {
-      name: 'Email',
-      url: 'mailto:your.email@example.com',
-      icon: <FiMail />,
+      name: 'LinkedIn',
+      url: 'https://linkedin.com/in/rabinesh',
+      subName:"linkedin.com/in/AbineshR",
+      icon: <FaLinkedin />,
     },
   ]
 
@@ -84,10 +101,10 @@ const Contact = () => {
           animate={isInView ? 'visible' : 'hidden'}
           className="max-w-4xl mx-auto"
         >
-          <motion.div variants={itemVariants} className="text-center mb-12 backdrop-blur-md bg-white/10 dark:bg-white/5 rounded-2xl p-8 shadow-xl border border-white/20">
+          <motion.div variants={itemVariants} className="text-center mb-12   rounded-2xl p-8 ">
             <h1 className="text-4xl md:text-5xl font-bold mb-4">Get In Touch</h1>
             <p className="text-lg text-base-content/70">
-              Have a project in mind or want to collaborate? Let's talk!
+            ✧ Have Something to discuss? Send me a message and let's talk! ✧
             </p>
           </motion.div>
 
@@ -95,23 +112,36 @@ const Contact = () => {
             <motion.div variants={itemVariants} className="space-y-6">
               <div>
                 <h2 className="text-2xl font-bold mb-4">Contact Information</h2>
-                <p className="text-base-content/70 mb-6">
-                  Feel free to reach out through any of these channels:
-                </p>
                 <div className="space-y-4">
+                  <motion.div>
+                    
+                  </motion.div>
                   {socialLinks.map((link, index) => (
-                    <motion.a
-                      key={index}
-                      href={link.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      whileHover={{ scale: 1.05 }}
-                      whileTap={{ scale: 0.95 }}
-                      className="flex items-center gap-4 p-4 backdrop-blur-md bg-white/20 dark:bg-white/10 rounded-lg hover:bg-white/30 transition-colors border border-white/30"
+                    <motion.div
+                        key={index}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.95 }}
+                        className="flex items-center gap-4 p-4 backdrop-blur-md bg-white/20 dark:bg-white/10 rounded-lg hover:bg-white/30 transition-colors border border-white/30"
                     >
-                      <span className="text-3xl">{link.icon}</span>
-                      <span className="text-lg font-semibold">{link.name}</span>
-                    </motion.a>
+                          <span className="text-3xl">{link.icon}</span>
+
+                          <div className="flex flex-col">
+                            <span className="text-lg font-white">{link.name}</span>
+                            <a 
+                              href={link.url
+                        
+                              } 
+                              className="text-sm text-white-600 hover:underline break-all"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              <span className="text-lg font-semibold">{link.subName}</span>
+                            </a>
+                          </div>
+
+                    </motion.div>
                   ))}
                 </div>
               </div>

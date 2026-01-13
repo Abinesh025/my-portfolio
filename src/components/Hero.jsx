@@ -3,6 +3,9 @@ import coder from "../assets/coder.png"
 import { AiFillGithub } from "react-icons/ai";
 import { FaLinkedin } from "react-icons/fa";
 import { FaCode } from "react-icons/fa6";
+
+import { useEffect, useState } from "react";
+
 import { MdOutlineContactMail } from "react-icons/md";
 
 const Hero = () => {
@@ -16,17 +19,28 @@ const Hero = () => {
     },
   }
 
+  const [showWelcome, setShowWelcome] = useState(true);
+
+useEffect(() => {
+  const timer = setTimeout(() => {
+    setShowWelcome(false);
+  }, 5000); // 5 seconds
+
+  return () => clearTimeout(timer);
+}, []);
+
+
     const socialLinks = [
       {
-        url: 'https://linkedin.com/in/yourprofile',
+        url: 'https://github.com/Abinesh025',
         icon: <AiFillGithub />,
       },
       {
-        url: 'https://github.com/yourusername',
+        url: 'https://linkedin.com/in/rabinesh',
         icon: <FaLinkedin />,
       },
       {
-        url: 'mailto:your.email@example.com',
+        url: '#showcase',
         icon: <FaCode />,
       },
     ]
@@ -157,7 +171,7 @@ const Hero = () => {
           <motion.a
             key={index}
             href={link.url}
-            target="_blank"
+            target={link.url === "#showcase" ? "" :"_blank"}
             rel="noopener noreferrer"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.95 }}
@@ -174,6 +188,17 @@ const Hero = () => {
         ))}
       </motion.div>
     </motion.div>
+          {showWelcome && (
+    <motion.div
+      initial={{ opacity: 0, y: -20 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: -20 }}
+      transition={{ duration: 1 }}
+      className="absolute left-[43%] top-[20%] left-1/2   transform -translate-x-1/2 px-6 py-3 bg-black/50 text-white rounded-full backdrop-blur-md z-50"
+    >
+    ✨  Welcome, to my Portfolio 👋
+    </motion.div>
+  )}
 
     {/* IMAGE */}
     <motion.div

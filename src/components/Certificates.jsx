@@ -10,6 +10,7 @@ import large from "../assets/certifications/large.jpg"
 import prompt from "../assets/certifications/propmting.jpg"
 import skill from "../assets/certifications/skill.jpg"
 import tcs from "../assets/certifications/tcs.jpg"
+import quiz from "../assets/certifications/Abinesh.jpg"
 
 const Certificates = () => {
   const ref = useRef(null)
@@ -42,6 +43,9 @@ const Certificates = () => {
     },
     {
        photo:tcs
+    },
+    {
+       photo:quiz
     },
   ]
 

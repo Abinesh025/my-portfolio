@@ -53,13 +53,13 @@ const ParticleBackground = () => {
               quantity: 6,
             },
             repulse: {
-              distance: 250,
+              distance: 550,
               duration: 0.6,
               factor: 100,
               speed: 1,
             },
             bubble: {
-              distance: 400,
+              distance: 1200,
               size: 20,
               duration: 2,
               opacity: 0.8,
@@ -86,7 +86,7 @@ const ParticleBackground = () => {
             random: true,
             speed: {
               min: 0.5,
-              max: 3,
+              max: 0.1,
             },
             straight: false,
             attract: {
@@ -105,7 +105,7 @@ const ParticleBackground = () => {
           number: {
             density: {
               enable: true,
-              area: 800,
+              area: 1200,
             },
             value: 120,
           },
@@ -122,7 +122,7 @@ const ParticleBackground = () => {
             },
           },
           shape: {
-            type: ['circle', 'triangle', 'polygon'],
+            type: ["square"],
             options: {
               polygon: {
                 sides: 4,
