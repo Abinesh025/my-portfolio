@@ -6,6 +6,7 @@ import { FaCode } from "react-icons/fa6";
 import { MdOutlineContactMail } from "react-icons/md";
 import { PiReadCvLogoBold } from "react-icons/pi";
 import { TbCertificate } from "react-icons/tb";
+import resume from"../assets/Resume.pdf"
 
 
 const About = () => {
@@ -27,13 +28,13 @@ const About = () => {
   const cards = [
     {
       title: 'Total Projects',
-      num:'02',
+      num:'03',
       content: 'Developed full-stack applications using React, Node.js, and MongoDB.',
       icon: <FaCode />,
     },
     {
       title: 'Certificates',
-      num:'10',
+      num:'11',
       content: 'Earned certifications in web development, programming, and tools like Git and Postman.',
       icon: <TbCertificate />,
     }
@@ -168,8 +169,8 @@ const letterVariants = {
             View Projects <FaCode />
           </a>
           <a
-             href="/resume.pdf"
-            download="Abinesh_Resume.pdf"
+            href={resume}
+            download="Resume.pdf"
             rel="noopener noreferrer"
             className="btn btn-outline rounded-none"
           >

@@ -11,6 +11,7 @@ import prompt from "../assets/certifications/propmting.jpg"
 import skill from "../assets/certifications/skill.jpg"
 import tcs from "../assets/certifications/tcs.jpg"
 import quiz from "../assets/certifications/Abinesh.jpg"
+import nptel from "../assets/certifications/nptel.jpeg";
 
 const Certificates = () => {
   const ref = useRef(null)
@@ -47,6 +48,9 @@ const Certificates = () => {
     {
        photo:quiz
     },
+    {
+      photo:nptel
+    }
   ]
 
   const cardVariants = {

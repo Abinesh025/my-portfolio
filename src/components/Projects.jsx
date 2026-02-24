@@ -3,6 +3,7 @@ import { useInView } from 'framer-motion'
 import { useRef } from 'react'
 import campus from "../assets/campus.png"
 import students from "../assets/students.png"
+import goAdvance from "../assets/goAdvance.png";
 import todo from "../assets/todo.png"
 import Weather from "../assets/Weather.png"
 import { GoLinkExternal } from "react-icons/go";
@@ -14,6 +15,14 @@ const Projects = () => {
   const isInView = useInView(ref, { once: true, margin: '-50px' })
 
   const projects = [
+    {
+      title: 'GoAdvance Digital Marketing',
+      photo: goAdvance,
+      description: 'GoAdvance Digital Marketing Projects enhances brand visibility and business growth through strategic digital marketing, data-driven campaigns, and targeted audience engagement.',
+      tech: ['React', 'Web3 Forms API', 'Framer Motion', 'Prebuilt Ui' ,'Tailwind CSS'],
+      liveLink: "https://go-advance.vercel.app/",
+      githubLink: "https://github.com/Abinesh025/GoAdvance"
+    },
     {
       title: 'Campus Thoughts',
       photo: campus,

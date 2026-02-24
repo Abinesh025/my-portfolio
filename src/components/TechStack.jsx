@@ -14,6 +14,8 @@ import github from "../assets/GitHub.webp"
 import postman from "../assets/Postman.webp"
 import vs from "../assets/Visual Studio Code (VS Code).webp"
 import prebuild from "../assets/prebuild.png"
+import sql from "../assets/sql.png"
+import n8n from "../assets/n8n.png"
 const TechStack = () => {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: '-50px' })
@@ -33,7 +35,9 @@ const TechStack = () => {
  
       { name: 'PostMan', icon: postman },
       { name: 'VS Code', icon: vs },
-      { name: 'Prebuilt UI', icon: prebuild}
+      { name: 'Prebuilt UI', icon: prebuild},
+      { name: 'n8n', icon: n8n},
+      { name: 'sql', icon: sql}
     ]
   
 
@@ -47,18 +51,6 @@ const TechStack = () => {
     },
   }
 
-
-  // const itemVariants = {
-  //   hidden: { opacity: 0, x: -100 },
-  //   visible: {
-  //     opacity: 1,
-  //     x: 0,
-  //     transition: {
-  //       duration: 0.4,
-  //       ease: 'easeOut',
-  //     },
-  //   },
-  // }
 
   const itemVariants = {
   hidden: {
