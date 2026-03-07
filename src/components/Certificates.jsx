@@ -75,13 +75,21 @@ const Certificates = () => {
           variants={cardVariants}
           initial="hidden"
           animate={isInView ? 'visible' : 'hidden'}
-          className="card backdrop-blur-md bg-white/20 dark:bg-white/10 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 border border-white/30"
+          className="
+            overflow-hidden
+            rounded-xl
+            shadow-xl
+            hover:shadow-2xl
+            transition-all duration-300 hover:-translate-y-1
+            border border-white/30
+            bg-white/5 dark:bg-white/5
+          "
         >
-          <div className="card-body">
-            <div className="flex items-center justify-between mb-2">
-              <img src={cert.photo} alt='Certificate' className='w-full rounded' />
-            </div>
-          </div>
+          <img
+            src={cert.photo}
+            alt="Certificate"
+            className="block w-full h-auto"
+          />
         </motion.div>
       ))}
     </div>

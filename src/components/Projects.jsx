@@ -8,6 +8,7 @@ import todo from "../assets/todo.png"
 import Weather from "../assets/Weather.png"
 import { GoLinkExternal } from "react-icons/go";
 import { AiFillGithub } from "react-icons/ai";
+import tot from "../assets/tot.png"
 
 
 const Projects = () => {
@@ -15,6 +16,14 @@ const Projects = () => {
   const isInView = useInView(ref, { once: true, margin: '-50px' })
 
   const projects = [
+    {
+      title: 'Tutorial Hub',
+      photo: tot,
+      description: 'Tutorial Hub is an educational platform that provides structured tutorials, guides, and resources for technologies like Arduino, Raspberry Pi, and ESP32. It helps learners understand concepts easily through organized modules, practical examples, and interactive content.',
+      tech: ['React', 'Tailwind CSS', "Prebuild UI", 'Responsive UI'],
+      liveLink: "https://egs-tutorial.netlify.app/",
+      githubLink: "https://github.com/Abinesh025/Iot"
+    },
     {
       title: 'GoAdvance Digital Marketing',
       photo: goAdvance,
@@ -66,31 +75,31 @@ const Projects = () => {
           className="card backdrop-blur-md bg-white/20 dark:bg-white/10 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-white/30"
         >
           <div className="card-body">
-              <motion.div
-  initial={{ opacity: 0, x: -100 }}
-  animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -100 }}
-  transition={{ duration: 0.6 }}
-  className="
-    text-center
-    backdrop-blur-md bg-white/10 dark:bg-white/5
-    rounded
-    p-3
-    shadow-xl
-    border border-white/20
-    sm:w-[80%] md:w-[50%] lg:w-[40vw]
-  "
->
-  <img
-    src={project.photo}
-    alt="project"
-    className="
-      w-full
-      h-auto
-      rounded
-      object-contain
-    "
-  />
-</motion.div>
+            <motion.div
+              initial={{ opacity: 0, x: -100 }}
+              animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -100 }}
+              transition={{ duration: 0.6 }}
+              className="
+                text-center
+                backdrop-blur-md bg-white/10 dark:bg-white/5
+                rounded
+                p-3
+                shadow-xl
+                border border-white/20
+                sm:w-[80%] md:w-[50%] lg:w-[40vw]
+              "
+            >
+              <img
+                src={project.photo}
+                alt="project"
+                className="
+                  w-full
+                  h-auto
+                  rounded
+                  object-contain
+                "
+              />
+            </motion.div>
 
             <h3 className="card-title text-2xl mb-2">{project.title}</h3>
             <p className="text-base-content/70 mb-4">{project.description}</p>

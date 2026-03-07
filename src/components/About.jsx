@@ -94,27 +94,34 @@ const letterVariants = {
   <div className="container mx-auto px-4">
 
     {/* TOP SECTION */}
-    <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
+    <div className="flex  lg:flex-row items-center justify-evenly gap-[500px]">
 
       {/* IMAGE (TOP ON MOBILE) */}
-                  <motion.div
-  initial={{ opacity: 0, x: -100 }}
-  animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -100 }}
-  transition={{ duration: 0.6 }}
-  className="
-    text-center
-    backdrop-blur-md bg-white/10 dark:bg-white/5
-    rounded
-    p-3
-    shadow-xl
-    border border-white/20
-    sm:w-[80%] md:w-[50%] lg:w-[20vw]
-  "
->
+      <motion.div
+        initial={{ opacity: 0, x: -100 }}
+        animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -100 }}
+        transition={{ duration: 0.6 }}
+        className="
+          flex items-center justify-center
+          text-center
+          backdrop-blur-md bg-white/10 dark:bg-white/5
+          rounded
+          p-3
+          shadow-xl
+          border border-white/20
+          sm:w-[80%] md:w-[50%] lg:w-auto
+        "
+      >
         <img
           src={Abi}
           alt="Abinesh"
-          className="rounded w-[220px] sm:w-[250px]"
+          className="
+            rounded-md
+            w-[140px] h-[180px]
+            sm:w-[150px] sm:h-[200px]
+            md:w-[160px] md:h-[210px]
+            object-cover 
+          "
         />
       </motion.div>
 

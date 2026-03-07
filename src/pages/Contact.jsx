@@ -15,6 +15,22 @@ const Contact = () => {
     email: '',
     message: '',
   })
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', form.current, {
+        publicKey: 'YOUR_PUBLIC_KEY',
+      })
+      .then(
+        () => {
+          console.log('SUCCESS!');
+        },
+        (error) => {
+          console.log('FAILED...', error.text);
+        },
+      );
+  };
   const [status, setStatus] = useState('')
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: '-100px' })
@@ -28,7 +44,19 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    // Handle form submission here
+    emailjs
+    .sendForm('service_eafpqu6', 'YOUR_TEMPLATE_ID', form.current, {
+      publicKey: 'YOUR_PUBLIC_KEY',
+    })
+    .then(
+      () => {
+        console.log('SUCCESS!');
+      },
+      (error) => {
+        console.log('FAILED...', error.text);
+      },
+    );
+
     setStatus('success',toast.success("Message sent successfully!"))
 
     setTimeout(() => {
