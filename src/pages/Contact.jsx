@@ -19,7 +19,7 @@ const Contact = () => {
     e.preventDefault();
 
     emailjs
-      .sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', form.current, {
+      .sendForm('YOUR_SERVICE_ID', 'QjMPz9e6cKMADme66', form.current, {
         publicKey: 'YOUR_PUBLIC_KEY',
       })
       .then(
@@ -45,8 +45,9 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault()
     emailjs
-    .sendForm('service_eafpqu6', 'YOUR_TEMPLATE_ID', form.current, {
-      publicKey: 'YOUR_PUBLIC_KEY',
+    .sendForm('service_eafpqu6', 
+"__ejs-test-mail-service__", form.current, {
+      publicKey: "QjMPz9e6cKMADme66",
     })
     .then(
       () => {

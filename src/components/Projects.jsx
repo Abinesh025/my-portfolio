@@ -9,6 +9,9 @@ import Weather from "../assets/Weather.png"
 import { GoLinkExternal } from "react-icons/go";
 import { AiFillGithub } from "react-icons/ai";
 import tot from "../assets/tot.png"
+import academic from "../assets/academic.png";
+import med from "../assets/med-care.png";
+import odoo from "../assets/odoo.png";
 
 
 const Projects = () => {
@@ -16,6 +19,14 @@ const Projects = () => {
   const isInView = useInView(ref, { once: true, margin: '-50px' })
 
   const projects = [
+    {
+      title: 'E.G.S Pillay Academic Hub',
+      photo: academic,
+      description: 'EGS Learning Platform is a full-stack educational web application for students, staff, and administrators.It offers structured access to study materials, online tests, and performance tracking.The platform supports real-time chat, cloud-based file sharing, and an AI assistant for interactive learning.With role-based access control, it ensures a secure, scalable, and efficient learning environment.',
+      tech: ['React', 'Node.js', "Express.js", 'MongoDB Atlas',"Tailwindcss"],
+      liveLink: "https://e-g-s-learning-platform-rwqx.vercel.app/",
+      githubLink: "https://github.com/Abinesh025/E.G.S-Learning-platform"
+    },
     {
       title: 'Tutorial Hub',
       photo: tot,
@@ -27,10 +38,26 @@ const Projects = () => {
     {
       title: 'GoAdvance Digital Marketing',
       photo: goAdvance,
-      description: 'GoAdvance Digital Marketing Projects enhances brand visibility and business growth through strategic digital marketing, data-driven campaigns, and targeted audience engagement.',
+      description: 'GoAdvance Digital Marketing Projects enhances brand visibility and drives business growth through strategic digital marketing solutions.It focuses on data-driven campaigns, targeted audience engagement, and performance optimization.The platform leverages SEO, social media marketing, and analytics to maximize reach and conversions.It helps businesses build a strong online presence and improve customer interaction.With a results-oriented approach, it ensures measurable growth and long-term digital success.',
       tech: ['React', 'Web3 Forms API', 'Framer Motion', 'Prebuilt Ui' ,'Tailwind CSS'],
       liveLink: "https://go-advance.vercel.app/",
       githubLink: "https://github.com/Abinesh025/GoAdvance"
+    },
+    {
+      title: 'ODOO - Reimbursement Management System',
+      photo: odoo,
+      description: 'The Reimbursement Management System is a MERN-based web application developed for the Odoo Hackathon to automate expense claims. It uses OCR to extract data from receipts and features a three-level approval workflow—Employee, Manager, and Finance—ensuring secure, transparent, and efficient processing with role-based access control.',
+      tech: ['React', 'MongoDB', 'Node.js' ,'Tailwind CSS',"OCR"],
+      liveLink: "https://odoo-hackathon-mu.vercel.app/",
+      githubLink: "https://github.com/Abinesh025/ODOO-Hackathon"
+    },
+    {
+      title: 'Med-Care',
+      photo: med,
+      description: 'MedCare is a full-stack healthcare web application designed to connect patients and medical professionals.It provides features like appointment booking, patient record management, and secure authentication.Users can access medical services, track health data, and communicate in real time.With a scalable architecture and role-based access control, it ensures a secure and efficient healthcare experience.',
+      tech: ['React', 'MongoDB', 'Framer Motion', 'Node.js' ,'Tailwind CSS',"Google Colab"],
+      liveLink: "https://med-care-plum-eight.vercel.app/",
+      githubLink: "https://github.com/Abinesh025/Med-Care"
     },
     {
       title: 'Campus Thoughts',

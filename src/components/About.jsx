@@ -28,13 +28,13 @@ const About = () => {
   const cards = [
     {
       title: 'Total Projects',
-      num:'03',
+      num:'07',
       content: 'Developed full-stack applications using React, Node.js, and MongoDB.',
       icon: <FaCode />,
     },
     {
       title: 'Certificates',
-      num:'11',
+      num:'13',
       content: 'Earned certifications in web development, programming, and tools like Git and Postman.',
       icon: <TbCertificate />,
     }
@@ -94,36 +94,41 @@ const letterVariants = {
   <div className="container mx-auto px-4">
 
     {/* TOP SECTION */}
-    <div className="flex  lg:flex-row items-center justify-evenly gap-[500px]">
+<div className="flex flex-col lg:flex-row items-center justify-between gap-10 lg:gap-[500px]">
 
       {/* IMAGE (TOP ON MOBILE) */}
-      <motion.div
-        initial={{ opacity: 0, x: -100 }}
-        animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -100 }}
-        transition={{ duration: 0.6 }}
-        className="
-          flex items-center justify-center
-          text-center
-          backdrop-blur-md bg-white/10 dark:bg-white/5
-          rounded
-          p-3
-          shadow-xl
-          border border-white/20
-          sm:w-[80%] md:w-[50%] lg:w-auto
-        "
-      >
-        <img
-          src={Abi}
-          alt="Abinesh"
-          className="
-            rounded-md
-            w-[140px] h-[180px]
-            sm:w-[150px] sm:h-[200px]
-            md:w-[160px] md:h-[210px]
-            object-cover 
-          "
-        />
-      </motion.div>
+
+<motion.div
+  initial={{ opacity: 0, x: -100 }}
+  animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -100 }}
+  transition={{ duration: 0.6 }}
+  className="
+    w-full
+    flex items-center justify-center
+    text-center
+    backdrop-blur-md bg-white/10 dark:bg-white/5
+    rounded
+    p-4
+    shadow-xl
+    border border-white/20
+    max-w-xs sm:max-w-sm md:max-w-md lg:max-w-[250px]
+    mx-auto mb-8 lg:mb-0
+  "
+>
+  <img
+    src={Abi}
+    alt="Abinesh"
+    className="
+      w-full
+      h-auto
+      object-cover
+      rounded-md
+      max-w-[250px] sm:max-w-[300px] md:max-w-[250px] max-h-[400px] lg:max-w-[200px] max-h-[280px]
+    "
+  />
+</motion.div>
+
+
 
       {/* TEXT CONTENT */}
       <div

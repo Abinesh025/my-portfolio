@@ -12,6 +12,8 @@ import skill from "../assets/certifications/skill.jpg"
 import tcs from "../assets/certifications/tcs.jpg"
 import quiz from "../assets/certifications/Abinesh.jpg"
 import nptel from "../assets/certifications/nptel.jpeg";
+import iot from "../assets/certifications/iot.jpeg";
+import periyar from "../assets/certifications/periyar.jpg.jpeg";
 
 const Certificates = () => {
   const ref = useRef(null)
@@ -50,7 +52,13 @@ const Certificates = () => {
     },
     {
       photo:nptel
-    }
+    },
+    {
+      photo:iot
+    },
+    {
+      photo:periyar
+    },
   ]
 
   const cardVariants = {
@@ -67,7 +75,7 @@ const Certificates = () => {
   }
 
   return (
-    <div ref={ref} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <div ref={ref} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
       {certificates.map((cert, index) => (
         <motion.div
           key={index}
@@ -80,16 +88,21 @@ const Certificates = () => {
             rounded-xl
             shadow-xl
             hover:shadow-2xl
-            transition-all duration-300 hover:-translate-y-1
-            border border-white/30
+            transition-all duration-300 hover:-translate-y-2 hover:scale-[1.02]
+            border border-white/20
             bg-white/5 dark:bg-white/5
+            backdrop-blur-sm
+            group
+            cursor-pointer
           "
         >
-          <img
-            src={cert.photo}
-            alt="Certificate"
-            className="block w-full h-auto"
-          />
+          <div className="w-full h-[240px] sm:h-[260px] md:h-[280px] flex items-center justify-center bg-white/5 p-3">
+            <img
+              src={cert.photo}
+              alt="Certificate"
+              className="max-w-full max-h-full object-contain rounded-lg group-hover:scale-105 transition-transform duration-300"
+            />
+          </div>
         </motion.div>
       ))}
     </div>

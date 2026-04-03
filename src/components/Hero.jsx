@@ -188,17 +188,37 @@ useEffect(() => {
         ))}
       </motion.div>
     </motion.div>
-          {showWelcome && (
-    <motion.div
-      initial={{ opacity: 0, y: -20 }}
-      animate={{ opacity: 1, y: 0 }}
-      exit={{ opacity: 0, y: -20 }}
-      transition={{ duration: 1 }}
-      className="absolute left-[43%] top-[20%] left-1/2   transform -translate-x-1/2 px-6 py-3 bg-black/50 text-white rounded-full backdrop-blur-md z-50"
-    >
-    ✨  Welcome, to my Portfolio 👋
-    </motion.div>
-  )}
+
+    {showWelcome && (
+      <motion.div
+        initial={{ opacity: 0, y: -30, scale: 0.9 }}
+        animate={{ opacity: 1, y: 0, scale: 1 }}
+        exit={{ opacity: 0, y: -20, scale: 0.9 }}
+        transition={{ duration: 1, ease: 'easeOut' }}
+        className="
+          fixed
+          top-20
+          left-1/2
+          -translate-x-1/2
+          w-max
+          max-w-[90vw]
+          px-5 sm:px-6 md:px-8
+          py-2.5 sm:py-3
+          bg-black/60
+          text-white
+          text-xs sm:text-sm md:text-base
+          font-medium
+          rounded-full
+          backdrop-blur-lg
+          text-center
+          z-[100]
+          shadow-lg shadow-black/20
+          border border-white/10
+        "
+      >
+        ✨ Welcome to my Portfolio 👋
+      </motion.div>
+    )}
 
     {/* IMAGE */}
     <motion.div
