@@ -14,6 +14,8 @@ import quiz from "../assets/certifications/Abinesh.jpg"
 import nptel from "../assets/certifications/nptel.jpeg";
 import iot from "../assets/certifications/iot.jpeg";
 import periyar from "../assets/certifications/periyar.jpg.jpeg";
+import basics from "../assets/certifications/bsics.jpg";
+import intermediate from "../assets/certifications/inter.jpg";
 
 const Certificates = () => {
   const ref = useRef(null)
@@ -58,6 +60,12 @@ const Certificates = () => {
     },
     {
       photo:periyar
+    },
+    {
+      photo:basics
+    },
+    {
+      photo:intermediate
     },
   ]
 

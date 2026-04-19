@@ -7,6 +7,8 @@ import { MdOutlineContactMail } from "react-icons/md";
 import { PiReadCvLogoBold } from "react-icons/pi";
 import { TbCertificate } from "react-icons/tb";
 import resume from"../assets/Resume.pdf"
+import { SiLeetcode } from 'react-icons/si';
+import { GiAchievement } from 'react-icons/gi';
 
 
 const About = () => {
@@ -33,8 +35,21 @@ const About = () => {
       icon: <FaCode />,
     },
     {
+      title: 'Problem Solving',
+      num:'50+',
+      content: '✧ Solved 50+ Problems in Leetcode ✧',
+      icon: <SiLeetcode />,
+      url:"https://leetcode.com/u/abinesh_codes/"
+    },
+    {
+      title: 'Achievements',
+      num:'01',
+      content: '✧ Selected as one of the finalists (Top 78 participants) in the Odoo Hackathon at VIT Pune. ✧',
+      icon: <GiAchievement />,
+    },
+    {
       title: 'Certificates',
-      num:'13',
+      num:'15',
       content: 'Earned certifications in web development, programming, and tools like Git and Postman.',
       icon: <TbCertificate />,
     }
@@ -216,13 +231,38 @@ const letterVariants = {
                 {card.num}
               </div>
             </div>
-
-            <div className="mt-4 text-left">
+            {
+              !card.url ? 
+              <>
+              <div className="mt-5 text-left">
               <h3 className="text-2xl font-semibold">{card.title}</h3>
-              <p className="text-base-content/70 mt-2">
+              <p className="text-base-content/70 mt-4">
                 {card.content}
               </p>
-            </div>
+              <p className="text-base-content/70 mt-2">
+                {card.url}
+              </p>
+            </div> </>
+:
+      <>
+          <div className="mt-4 text-left">
+                      <h3 className="text-2xl font-semibold">{card.title}</h3>
+                      <div className='flex justify-between  w-full'>
+                        <p className=" mt-6">
+                          {card.content}
+                        </p>
+                              <a
+                          href={card.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="btn btn-primary btn-sm mt-6"
+                        > More Details</a>
+                        </div>
+                    </div>
+        </>
+            
+            }
+            
           </div>
         </motion.div>
       ))}

@@ -16,6 +16,7 @@ import vs from "../assets/Visual Studio Code (VS Code).webp"
 import prebuild from "../assets/prebuild.png"
 import sql from "../assets/sql.png"
 import n8n from "../assets/n8n.png"
+import aws from "../assets/aws.png"
 const TechStack = () => {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: '-50px' })
@@ -37,7 +38,8 @@ const TechStack = () => {
       { name: 'VS Code', icon: vs },
       { name: 'Prebuilt UI', icon: prebuild},
       { name: 'n8n', icon: n8n},
-      { name: 'sql', icon: sql}
+      { name: 'sql', icon: sql},
+      { name: 'AWS Cloud', icon: aws}
     ]
   
 
