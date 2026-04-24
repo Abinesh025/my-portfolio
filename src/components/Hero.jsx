@@ -24,7 +24,7 @@ const Hero = () => {
 useEffect(() => {
   const timer = setTimeout(() => {
     setShowWelcome(false);
-  }, 5000); // 5 seconds
+  }, 2000); // 5 seconds
 
   return () => clearTimeout(timer);
 }, []);
@@ -40,7 +40,7 @@ useEffect(() => {
         icon: <FaLinkedin />,
       },
       {
-        url: '#showcase',
+        url: 'https://leetcode.com/u/abinesh_codes/',
         icon: <FaCode />,
       },
     ]
@@ -194,15 +194,16 @@ useEffect(() => {
         initial={{ opacity: 0, y: -30, scale: 0.9 }}
         animate={{ opacity: 1, y: 0, scale: 1 }}
         exit={{ opacity: 0, y: -20, scale: 0.9 }}
-        transition={{ duration: 1, ease: 'easeOut' }}
+        transition={{ duration: 0.5, ease: 'easeOut' }}
         className="
           fixed
           top-20
-          left-1/2
+          lg:left-[40%]
           -translate-x-1/2
           w-max
           max-w-[90vw]
           px-5 sm:px-6 md:px-8
+          sm:left-[50%]
           py-2.5 sm:py-3
           bg-black/60
           text-white
